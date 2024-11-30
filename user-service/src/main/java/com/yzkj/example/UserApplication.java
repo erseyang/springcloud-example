@@ -7,15 +7,26 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.Environment;
 
 import java.net.InetAddress;
+import java.util.Objects;
 
 @SpringBootApplication
 @EnableDiscoveryClient
 public class UserApplication {
     public static void main(String[] args) throws Exception {
+        //添加环境变量
+        System.setProperty("spring.cloud.bootstrap.enabled", "true");
         ConfigurableApplicationContext application = SpringApplication.run(UserApplication.class, args);
         Environment env = application.getEnvironment();
         String ip = InetAddress.getLocalHost().getHostAddress();
         String port = env.getProperty("server.port");
+        String profile = env.getProperty("spring.cloud.nacos.config.shared-config[0].data-id");
+        System.out.println(profile);
+        String name = env.getProperty("baby.name");
+        if (name == null){
+            System.out.println("name 为空");
+        } else {
+            System.out.println(name);
+        }
 //        String property = env.getProperty("");
         System.out.println(
                 "\n\t" +

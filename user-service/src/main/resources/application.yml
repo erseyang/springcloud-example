@@ -1,19 +1,4 @@
-server:
-  port: 8001
 spring:
-  application:
-    name: user-service
-  cloud:
-    nacos:
-      discovery:
-        namespace: 46cb442f-d169-47c4-a8b1-2bf0ac9e4832
-        server-addr: 127.0.0.1:8848
-        username: nacos
-        password: nacos
-      config:
-        namespace: 46cb442f-d169-47c4-a8b1-2bf0ac9e4832
-        server-addr: 127.0.0.1:8848
-        username: nacos
-        password: nacos
-        group: dev
-        data-id: user-service.yaml
+  profiles:
+    active: dev
+
