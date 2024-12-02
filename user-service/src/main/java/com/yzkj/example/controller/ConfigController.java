@@ -21,7 +21,7 @@ public class ConfigController {
 
     @RequestMapping(value = "get", method = RequestMethod.GET)
     public String getConfigValue() {
-        babyName = environment.getProperty("spring.redis.name");
+//        babyName = environment.getProperty("spring.redis.name");
         return babyName;
     }
 

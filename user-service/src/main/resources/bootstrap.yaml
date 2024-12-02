@@ -1,12 +1,12 @@
 server:
   port: 8001
+logging:
+  level:
+    com.alibaba.nacos: DEBUG
+    org.springframework.cloud: DEBUG
 spring:
   application:
     name: user-service
-  logging:
-    level:
-      com.alibaba.nacos: DEBUG
-      org.springframework.cloud: DEBUG
   cloud:
     nacos:
       discovery:
@@ -27,4 +27,3 @@ spring:
             data-id: ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
             group: DEFAULT_GROUP
             refresh: false #是否动态刷新
-        auto-refresh: true

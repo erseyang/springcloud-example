@@ -19,15 +19,8 @@ public class UserApplication {
         Environment env = application.getEnvironment();
         String ip = InetAddress.getLocalHost().getHostAddress();
         String port = env.getProperty("server.port");
-        String profile = env.getProperty("spring.cloud.nacos.config.shared-config[0].data-id");
-        System.out.println(profile);
-        String name = env.getProperty("baby.name");
-        if (name == null){
-            System.out.println("name 为空");
-        } else {
-            System.out.println(name);
-        }
-//        String property = env.getProperty("");
+//        String profile = env.getProperty("spring.cloud.nacos.config.shared-config[0].data-id");
+//        System.out.println(profile);
         System.out.println(
                 "\n\t" +
                         "--------------------------------------\n\t" +
