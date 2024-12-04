@@ -9,21 +9,21 @@ spring:
     name: user-service
   cloud:
     nacos:
+      server-addr: 127.0.0.1:8848
+      # 从Nacos读取配置项的超时时间
+      timeout: 5000
+      username: nacos
+      password: nacos
+      config:
+        namespace: 46cb442f-d169-47c4-a8b1-2bf0ac9e4832
+        # 配置文件后缀名为yaml
+        file-extension: yaml
+        shared-config[0]:
+          data-id: ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+          group: DEFAULT_GROUP
+          refresh: false #是否动态刷新
       discovery:
         namespace: 46cb442f-d169-47c4-a8b1-2bf0ac9e4832
         server-addr: 127.0.0.1:8848
         username: nacos
         password: nacos
-      config:
-        namespace: 46cb442f-d169-47c4-a8b1-2bf0ac9e4832
-        server-addr: 127.0.0.1:8848
-        # 从Nacos读取配置项的超时时间
-        timeout: 5000
-        username: nacos
-        password: nacos
-        # 配置文件后缀名为yaml
-        file-extension: yaml
-        shared-config[0]:
-            data-id: ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
-            group: DEFAULT_GROUP
-            refresh: false #是否动态刷新
