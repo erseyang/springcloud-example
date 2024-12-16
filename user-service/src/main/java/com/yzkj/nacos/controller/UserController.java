@@ -1,4 +1,4 @@
-package com.yzkj.example.controller;
+package com.yzkj.nacos.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

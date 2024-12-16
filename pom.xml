@@ -11,6 +11,8 @@
     <modules>
         <module>user-service</module>
         <module>dept-service</module>
+        <module>dubbo-service</module>
+        <module>k8s-service</module>
     </modules>
 
     <properties>

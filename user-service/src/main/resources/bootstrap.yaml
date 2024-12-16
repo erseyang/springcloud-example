@@ -4,6 +4,9 @@ logging:
   level:
     com.alibaba.nacos: DEBUG
     org.springframework.cloud: DEBUG
+springdoc:
+  api-docs:
+    enabled: true
 spring:
   application:
     name: user-service

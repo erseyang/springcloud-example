@@ -1,4 +1,4 @@
-package com.yzkj.example.controller;
+package com.yzkj.nacos.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
